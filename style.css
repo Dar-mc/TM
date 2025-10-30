@@ -322,3 +322,7 @@ color:#7CA982;
 .logo-card-single {
 	transform: rotateY(180deg);
 }
+
+html {
+  scroll-behavior: smooth; /* rend le changement de page vers une ancre plus fluide */
+}
