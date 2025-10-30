@@ -1,0 +1,324 @@
+.bouton {
+  background-color: #282A35;
+  width: 350px;
+  aspect-ratio: 1/1;
+  border: 2px solid #282A35;
+  border-radius: 8px;
+  padding: 5px;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: var(--delay, 0s);
+  min-width: 180px;
+  min-height: 180px;
+  max-width: 90vw;
+  max-height: 90vw;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.boutoncentre {
+  background-color: #282A35;
+  width: 100%;
+  height: 90%;
+  border: 2px solid #282A35;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.go {
+  background-color: #7CA982;
+  width: 90%;
+  height: 50px;
+  border: 2px solid #7CA982;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #282A35;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 0 18px;
+  overflow: hidden;
+}
+
+.go .arrow {
+  display: inline-block;
+  transition: transform 0.7s cubic-bezier(0.7,0,0.3,0.8);
+  margin-left: 10px;
+}
+
+.go:hover .arrow {
+  transform: translateX(100px);
+}
+h3 {
+  color: #F1F7ED;
+  font-size: clamp(12px,2vw,14px);
+  text-align: center;
+  margin: 8px 0;
+  font-weight: 500;
+  z-index: 2;
+}
+h4 {
+	margin-right: 10%;
+	margin-left: 2%;
+	line-height: 2;
+	color: #F1F7ED;
+}
+code {
+  font-family: "IBM Plex Mono", monospace;
+}
+.light-green {
+background-color:#7CA982;
+}
+.text-light-green {
+color:#7CA982;
+}
+.bouton-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+  width: 100%;
+  min-height:200px;
+}
+
+/* Styles pour les images */
+
+.divimage {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: -10px;
+  z-index: 1;
+}
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  object-fit: contain;
+  max-height: 120%;
+  z-index: 1;
+}
+.image:hover {
+  transform: scale(1.15) rotate(+0deg);
+}
+
+/* Animations de la page "à propos" */
+
+.divpresentation {
+	cursor: default;
+	background-color:#282A35;
+	background-color: #282A35;
+	width: 95%;
+	height: 100%;
+	border: 2px solid #282A35;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	font-size: 4vh;
+	line-height: 7vh;
+	align-items:center;
+	align-self:center;
+  justify-content: space-around;
+}
+.presentation {
+	color: #e0e0e0; 
+  font-size: 2.5vh;
+  width: 80%;
+  line-height: 4vh;
+  padding: 0 0 0 3vw;
+  position: relative;
+  transition: .3s ease-in-out;	
+	display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.presentation:hover {
+	transform: translateX(14px);
+	color: #b8b8b8;
+}
+.presentation::before {
+	background-color: #e0e0e077;
+	content:"";
+	border-radius: 10px;
+	height: 75%;
+	left: 1.5vw;
+	position: absolute;
+	top: 1.2vh;
+	transform: scaleY(1);
+	transition: 0.4s 0.2s ease-in-out;
+	width: 3px;
+}
+.presentation:hover::before {
+	background-color: #e0e0e0;
+	visibility: visible;
+	transform: scaleY(1.4);
+}
+.presentation::after {
+	background-image: url(drapeau.png);
+    background-size: cover;
+    content: "";
+    font-family: Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif;
+    height: 4.26667vh;
+    left: -2vw;
+    position: absolute;
+    top: calc(50% - 2.13333vh);
+    transform: scaleX(0);
+    transition: 0.3s 2s ease-in-out;
+    vertical-align: middle;
+    visibility: hidden;
+    width: 4.26667vh;
+}
+.presentation:hover::after {
+	visibility: visible;
+	transform: scaleX(1);
+	transition: 0.3s 0.5s ease-in-out;
+}
+.presentation:nth-child(2)::after {
+	background-image: url(controller.png);
+}
+.presentation:nth-child(3)::after {
+  background-image: url(laptop.png);
+}
+
+/* Menu déroulant */
+
+.collapse {
+  background-color: #282A35;
+  color: #F1F7ED;
+  cursor: pointer;
+  width: 100%;
+  height: 10%;
+  border: 2px solid #282A35;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.active, .collapse:hover{
+  background-color: #3e4051;
+}
+.collapse:after{
+  content: "\0023F5";
+  color: #F1F7ED;
+  font-weight: bold;
+  float: right;
+  margin-left: auto;
+  font-size: 1.5em;
+  min-height: 7vw;
+  display: flex;
+  align-items: center;
+}
+.active:after{
+  content: "\0023F7";
+}
+.content{
+  transition: max-height 0.2s ease-out;
+  background-color: #282A35;
+  border: 2px solid #282A35;
+  border-radius: 8px;
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  width:100%;
+  flex-direction: column;
+}
+.content.ferme {
+  border: none;
+}
+
+/* Animation du logo */
+
+@keyframes logo-animation {
+	from {transform: rotateY(0deg)}
+	to {transform: rotateY(180deg)}
+}
+
+.logo-card-single {
+	background-color: transparent;
+	aspect-ratio: 2/3;
+	perspective: 999px;
+	border-radius: 4%;
+}
+
+.logo-card-tilt {
+	background-color: transparent;
+	aspect-ratio: 2/3;
+	perspective: 999px;
+}
+.logo-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.3s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 4%;
+	transform: rotateY(180deg);
+	/*              name     duration timing delay iteration direction */
+	animation: logo-animation 0.3s linear 0s 1 alternate
+}
+
+/* .logo-card-single:hover .logo-card-inner{
+	transform: rotateY(0deg);
+} (animation des cartes du logo en hover) */
+
+.logo-card-front, .logo-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-size: 100% 100%;
+	border-radius: 4%
+}
+
+.logo-card-front {
+	background-color: #bbbbbb;
+	color: black;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transform: rotateY(180deg);
+}
+
+.logo-card-back {
+	background-color: #2980b9;
+	color: white;
+	transform: rotateY(0deg);
+	background-image:url('testgame/card_back.png');
+}
+
+.logo-suit-symbol {
+	margin:auto;
+	user-select: none;
+	aspect-ratio: 1/1;
+}
+
+.logo-card-single {
+	transform: rotateY(180deg);
+}

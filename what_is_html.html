@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
+<link rel="icon" href="logo_fond.ico"/>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Source Sans Pro", sans-serif}
+h2,h1 {margin-left:1%;font-weight:bold}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="w3-container light-green w3-center" style="padding:32px 16px">
+  <div class="w3-center w3-container light-green" style="padding:8px 16px">
+   <a href="homepage.html">
+    <!-- <img src="logo.png" alt="Homepage" style="height:70px"> (logo fixe) -->
+	<div id="logo-cards"></div>
+	<div id="logo-cards-2"></div>
+	<script src="logo_script.js"></script>
+   </a>
+  </div>
+  <br>
+  <h1 class="w3-margin w3-jumbo w3-bold">BLACKJACK</h1>
+  <p class="w3-xmedium">Par Dario Guzzante et Cyrus Zarrabi</p>
+  <a href="play.html#ancre">
+   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-pale-yellow">Jouer au jeu</button>
+   </a>
+</header>
+
+<!-- Navbar -->
+<div>
+  <div id="ancre" class="w3-bar light-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-pale-yellow w3-large light-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.html#ancre" class="w3-bar-item w3-button w3-padding-large light-green w3-hover-pale-yellow">Accueil</a>
+    <a href="what_is_html.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Qu'est-ce qu'HTML ?</a>
+    <a href="rules.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Règles</a>
+    <a href="play.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Jouer</a>
+    <a href="explanation.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Comment nous avons fait ce jeu</a>
+  </div>
+
+  <!-- Navbar small screens -->
+  <div id="navDemo" class="w3-bar-block light-green w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="what_is_html.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Qu'est-ce qu'HTML ?</a>
+    <a href="rules.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Règles</a>
+    <a href="play.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Jouer</a>
+    <a href="explanation.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Comment nous avons fait ce jeu</a>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="w3-row-padding w3-padding-64 w3-container" style="background-color:#E0EEC6;color:#F1F7ED;display:flex;flex-direction:column;align-items:flex-start;justify-content:center">
+	<div class="boutoncentre" data-aos="fade-down" data-aos-duration="1000">
+		<h1>HTML</h1>
+		<h4>
+		HTML est l'abréviation de HyperText Markup Language. C'est le langage de base utilisé pour créer et structurer du contenu web.	Il permet de placer les éléments dans la page pour qu'ils soient affichés correctement. 
+		</h4>
+		<h4>
+		Chaque élément est défini entre des balises <code>(&lt;nom de l'élément&gt;)</code> et doit être refermée avec <code>&lt;/nom de l'élément&gt;</code>.
+		Chaque page HTML doit être ouverte par <code>&lt;!DOCTYPE html&gt;</code>, puis <code>&lt;html&gt;</code> et fermée par <code>&lt;/html&gt;</code>.
+		</h4>
+	<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>L'en-tête HTML</h2></button>
+	<div class="content">
+	<h4>
+		La plupart des pages ont un en-tête HTML au début (à ne pas confondre avec l'en-tête (header) présenté plus tard). On y met le titre, les métadonnées, les liens, etc...
+    </h4>
+	</div>
+	<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Le titre</h2></button>
+	<div class="content">
+    <h4>
+		Le titre de la page est le nom qui apparaît dans l'onglet du navigateur. Il est défini par <code>&lt;title&gt;</code>.
+    </h4>
+	</div>
+	<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Les métadonnées</h2></button>
+	<div class="content">
+    <h4>
+		Les métadonnées sont les informations visibles qui décrivent le contenu ou les paramètres de la page (ex:encodage, description, mots-clés).
+    </h4>
+	</div>
+	<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Les liens</h2></button>
+	<div class="content">
+    <h4>
+		Les liens sont utilisés pour lier la page avec une source externe, trouvable sur internet ou dans le dossier de la page. Ils sont souvent utilisés pour mettre des liens aux fiches de style CSS, qui permettent de modifier le style de la page et définissent son apparence visuelle.
+    Ils sont utilisés avec le format <code>&lt;link rel="type" href="lien"&lt;</code>. La relation (<code>rel=""</code>) est le la nature du lien entre la page et la source externe. Il y a beaucoup de natures différentes, comme les fiches de style (stylesheet), les icones (icon) ou les préchargement de ressources (preload).
+    La référence hypertexte (<code>href=""</code>) est l'endroit où l'on indique l'adresse du chemin vers la source que l'on veut lier.
+	</h4>
+	</div>
+	<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Le corps</h2></button>
+	<div class="content">
+    <h4>
+    	Le corps suit directement l'en tête. Il est désigné par <code>&lt;body&gt;</code>. Il contient tout le contenu du site que l'utilisateur peut voir. 
+    </h4>
+	</div>
+	<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Textes</h2></button>
+	<div class="content">
+    <h4>
+    	Pour ajouter du texte sur une page web, vous pouvez utiliser les titres. Ils permettent de hiérarchiser les textes avec différentes tailles, <code>&lt;h1&gt;</code> étant le plus grand et <code>&lt;h6&gt;</code> étant le plus petit.
+    Il est aussi possible d'utiliser des paragraphes <code>&lt;p&gt;</code>. Ces derniers n'ont qu'une taille.
+    </h4>
+	</div>
+    <button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Images</h2></button>
+	<div class="content">
+    <h4>
+    	Il est possible d'ajouter des images sur une page web. Pour cela, utilisez <code>&lt;img src="lien/chemin de l'image"&gt;</code>.
+    </h4>
+	</div>
+    <button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Conteneurs</h2></button>
+	<div class="content">
+    <h4>
+    	Les conteneurs sont des éléments qui peuvent être remplis avec d'autres éléments, comme du texte ou des images. Ils sont utiles pour organiser la structure du site. Utilisez-les avec <code>&lt;div&gt;</code>. Ils sont par défaut des blocks transparents et rectangulaires.
+    Il est possible de les rendre différents en définissant le style dans la balise ou avec des propriétés CSS. Le corps et la tête de pages sont des sortes de conteneurs.
+    </h4>
+	</div>
+    <button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Plus</h2></button>
+	<div class="content">
+	<h4>
+		Il est aussi possible de faire des formulaires, tableaux, listes, sauts de ligne, d'ajouter des vidéos, d'intégrer des pages internet et bien plus. Si vous voulez en apprendre plus, nous vous recommendons le site <a href="https://www.w3schools.com/html">W3Schools</a> qui offre des cours plus approfondis et couvre un plus large panel d'éléments. Leurs cours sont très accessibles aux débutants et sont également utiles pour les personnes plus expérimentées.
+    Cette page parlait principalement des grandes bases d'HTML et des éléments utilisés sur notre site.
+	</h4>
+	</div>
+	<h4>
+		HTML ne permet ni de changer le style pour tous les éléments de la page (polices, couleurs, etc...), ni de faire des intéractions dynamiques (animations ou autre). Pour le style vous devez utiliser <a href="what_is_css.html">CSS</a>.
+	</h4>
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center">  
+<div class ="w3-container w3-padding-64 w3-center w3-opacity">
+ <a href="about_us.html#ancre" target="_self">à propos de nous</a>
+</div>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+// menu collapsible
+var coll = document.getElementsByClassName("collapse");
+var i;
+// faire apparaître le texte
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+// enlever la bordure quand ils sont fermés
+var contents = document.getElementsByClassName("content");
+for (var j = 0; j < contents.length; j++) {
+  if (!contents[j].style.maxHeight || contents[j].style.maxHeight === "0px") {
+    contents[j].classList.add("ferme");
+  }
+}
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script> //animate on scroll initialization
+ AOS.init();
+</script>
+
+</body>
+</html>

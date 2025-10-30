@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Explication des éléments du jeu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
+<link rel="icon" href="logo_fond.ico"/>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Source Sans Pro", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="w3-container light-green w3-center" style="padding:32px 16px">
+  <div class="w3-center w3-container light-green" style="padding:8px 16px">
+   <a href="homepage.html">
+    <!-- <img src="logo.png" alt="Homepage" style="height:70px"> (logo fixe) -->
+	<div id="logo-cards"></div>
+	<div id="logo-cards-2"></div>
+	<script src="logo_script.js"></script>
+   </a>
+  </div>
+  <br>
+  <h1 class="w3-margin w3-jumbo w3-bold">BLACKJACK</h1>
+  <p class="w3-xmedium">Par Dario Guzzante et Cyrus Zarrabi</p>
+  <a href="play.html#ancre">
+   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-pale-yellow">Jouer au jeu</button>
+   </a>
+</header>
+
+<!-- Navbar -->
+<div>
+  <div id="ancre" class="w3-bar light-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-pale-yellow w3-large light-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large light-green w3-hover-pale-yellow">Accueil</a>
+    <a href="what_is_html.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Qu'est-ce qu'HTML ?</a>
+    <a href="rules.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Règles</a>
+    <a href="play.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Jouer</a>
+    <a href="explanation.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Comment nous avons fait ce jeu</a>
+  </div>
+
+  <!-- Navbar small screens -->
+  <div id="navDemo" class="w3-bar-block light-green w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="what_is_html.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Qu'est-ce qu'HTML ?</a>
+    <a href="rules.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Règles</a>
+    <a href="play.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Jouer</a>
+    <a href="explanation.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Comment nous avons fait ce jeu</a>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="w3-row-padding w3-padding-64 w3-container" style="background-color:#E0EEC6;color:#F1F7ED;display:flex;justify-content:center">
+	<div class="boutoncentre" data-aos="fade-down" data-aos-duration="1000">
+		<h1>Comment avons-nous créé le jeu ?</h1>
+		<h4>Le jeu que vous pouvez trouver sur <a href="play.html">la page "Jouer"</a> a été
+		créé uniquement grâce aux langages les plus utilisés du web: HTML, CSS et JavaScript.
+    </h4>
+		<h4>Le JavaScript permet de facilement programmer des événements et tenir en compte
+		l'"état" de la partie, tandis que le HTML et CSS permettent de mettre en forme le tout.
+    </h4>
+		<h4>En réalité, le jeu, ne demandant pas de limite de temps, fonctionne en appellant
+		des fonctions à chaque action, et utilise un algorithme pour décider des actions prises.
+    </h4>
+    <button class="collapse"><h2>Les cartes</h2></button>
+    <div class="content">
+		<h4>Les cartes sont faites en combinant des images d'avant et arrière de carte
+    l'une devant l'autre avec "rotateY()", et disposant des images de carreaux, cœurs, 
+    trefles ou piques sur la face avant (suivant le symbole de la carte), ce qui les rend modifiables facilement.
+    </h4></div>
+		<button class="collapse"><h2>La génération aléatoire des cartes</h2></button>
+    <div class="content">
+		<h4>Les cartes sont générées aléatoirement avec la fonction "Math.random()", qui renvoie
+		une valeur entre 0 et 1. (1 exclus) De cette manière, les cartes sont enregistrées avec
+		deux nombres: "1+Math.floor(Math.random()*13)", qui renvoie une valeur entre 1 et 13, pour la valeur
+		de la carte, et "Math.floor(Math.random()*4)", qui renvoie une valeur entre 0 et 3, correspondant
+		aux symboles des cartes. (respectivement ♦ ♥ ♣ ♠)
+    </h4></div>
+    <button class="collapse"><h2>La valeur de l'as</h2></button>
+    <div class="content">
+		<h4>L'As est particulier, car sa valeur peut changer suivant le nombre de cartes en main.
+    </h4>
+		<h4>Pour faire en sorte qu'il compte comme le plus possible entre 1 et 11 sans faire perdre
+		le joueur, il faut penser un peu en dehors de la boîte.
+    </h4>
+		<h4>En effet, au lieu de choisir sa valeur, notre système ne compte les As qu'à la fin, après
+		les autres cartes, et utilise un algorithme simple pour avoir le plus de points:
+    </h4>
+		<h4>Pour chaque As, si le score actuel du joueur est plus petit que "11 - le nombre d'autre As
+		restant", alors, dans la pire situation, cet As peut valoir 11 et les autres 1, sans faire perdre le joueur.<br>
+		Or, si la valeur est dépassée, alors il sera impossible d'avoir un As valant 11 sans perdre, et il
+		ne donnera donc qu'un point.
+    </h4>
+		<h4>Cette valeur est recalculée lorsqu'une nouvelle carte est piochée, de sorte qu'il soit
+		impossible de perdre à cause d'un As valant 11 au lieu de 1.
+    </h4></div>
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center">  
+<div class ="w3-container w3-padding-64 w3-center w3-opacity">
+ <a href="about_us.html#ancre" target="_self">à propos de nous</a>
+</div>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+// menu collapsible
+var coll = document.getElementsByClassName("collapse");
+var i;
+// faire apparaître le texte
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+// enlever la bordure quand ils sont fermés
+var contents = document.getElementsByClassName("content");
+for (var j = 0; j < contents.length; j++) {
+  if (!contents[j].style.maxHeight || contents[j].style.maxHeight === "0px") {
+    contents[j].classList.add("ferme");
+  }
+}
+</script>
+
+</body>
+</html>

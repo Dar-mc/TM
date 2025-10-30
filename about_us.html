@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>À propos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
+<link rel="icon" href="logo_fond.ico"/>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Source Sans Pro", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="w3-container light-green w3-center" style="padding:32px 16px">
+  <div class="w3-center w3-container light-green" style="padding:8px 16px">
+   <a href="homepage.html">
+    <!-- <img src="logo.png" alt="Homepage" style="height:70px"> (logo fixe) -->
+	<div id="logo-cards"></div>
+	<div id="logo-cards-2"></div>
+	<script src="logo_script.js"></script>
+   </a>
+  </div>
+  <br>
+  <h1 class="w3-margin w3-jumbo w3-bold">BLACKJACK</h1>
+  <p class="w3-xmedium">Par Dario Guzzante et Cyrus Zarrabi</p>
+  <a href="play.html#ancre">
+   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-pale-yellow">Jouer au jeu</button>
+   </a>
+</header>
+
+<!-- Navbar -->
+<div>
+  <div id="ancre" class="w3-bar light-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-pale-yellow w3-large light-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-padding-large light-green w3-hover-pale-yellow">Accueil</a>
+    <a href="what_is_html.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Qu'est-ce qu'HTML ?</a>
+    <a href="rules.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Règles</a>
+    <a href="play.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Jouer</a>
+    <a href="explanation.html#ancre" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-pale-yellow">Comment nous avons fait ce jeu</a>
+  </div>
+
+  <!-- Navbar small screens -->
+  <div id="navDemo" class="w3-bar-block light-green w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="what_is_html.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Qu'est-ce qu'HTML ?</a>
+    <a href="rules.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Règles</a>
+    <a href="play.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Jouer</a>
+    <a href="explanation.html" class="w3-bar-item w3-hover-pale-yellow w3-button w3-padding-large">Comment nous avons fait ce jeu</a>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="w3-row-padding w3-padding-64 w3-container" style="background-color:#E0EEC6;color:#F1F7ED;min-height:800px;height:auto;display:flex;justify-content:center;">
+	<div class="divpresentation">
+	<p class="presentation">
+	Nous venons de Suisse. Nous étudions au Gymnase de Morges et nous avons fait ce site dans le cadre de notre travail de maturité.
+  Le travail de maturité est un travail qui s'étend sur une année, du milieu de la deuxième au milieu de la troisième année.
+  Nous devrons faire une défense orale de notre travail en novembre 2025.
+	</p>
+	<p class="presentation">
+	Nous sommes deux fans de jeux vidéos. Nous avons donc pensé à faire un jeu comme sujet principal du site.
+  Comme le travail vise principalement le HTML, CSS et Javascript, nous avons fait le jeu entièrement avec ces langages.
+  </p>
+  <p class="presentation">
+  Nous ne connaissions pas vraiment ces langages de programmation avant de commencer ce travail.
+  Comme nous n'avions aucune expérience avec ces langages, nous avons décidé de faire le plus d'éléments possibles nous mêmes.
+  C'est pourquoi nous n'avons presque pas utilisé de librairie, contrairement à beaucoup de sites internet aujourd'hui.
+  Nous avons fait ce choix pour apprendre les bases de ces langages, qui sont l'origine de toute page web, et réussir à les pousser au maximum que nous pouvions.
+  Nous avons aussi fait cela pour être capable d'expliquer toutes nos lignes de code dans les détails.
+  </p>
+	<p>on va changer ça hein</p>
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center">  
+<div class ="w3-container w3-padding-64 w3-center w3-opacity">
+ <a href="about_us.html#ancre" target="_self">à propos de nous</a>
+</div>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
