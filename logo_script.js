@@ -1,12 +1,12 @@
 const logo_cards = document.getElementById("logo-cards");
 const logo_cards_2 = document.getElementById("logo-cards-2");
-let name = "testgame/face.png";
+let name = "face.png";
 let secret_cheat = false; // Reload la page jusqu'à ce qu'il y ait un Blackjack dans le logo.
 let card1_value = 1+Math.floor(Math.random()*10);
 let card2_value = 1+Math.floor(Math.random()*10);
 let logo_blackjack_secret = ((card1_value == 1 || card2_value == 1) && card1_value+card2_value == 11)
 function _tocard(nombre,symbol) {
-	symbol = "testgame/"+symbol;
+	// symbol = "testgame/"+symbol;
 	//return `"><img class="logo-suit-symbol" src="testgame/${symbol}_suit.png" alt="${name}"`+`style="width:25%;">`;
 	switch(nombre) {
 		case 1: return `">`+
@@ -150,7 +150,7 @@ function _tocard(nombre,symbol) {
 	}
 }
 
-function carte(nombre,symbol,name="testgame/face.png", rotation) {
+function carte(nombre,symbol,name="face.png", rotation) {
 	let _card_front_side = _tocard(nombre,symbol) /*nombre,symbol,name*/
 	let border_effect = (logo_blackjack_secret) ? "style=\"border-style:double;\"" : ""
 	return `<div class="logo-card-tilt" style="transform: rotate(${rotation});"><div class="logo-card-single">
@@ -165,8 +165,8 @@ function carte(nombre,symbol,name="testgame/face.png", rotation) {
 }
 logo_cards.style = "width:50px; height:10px; position:absolute; top:10px; left:50%"
 logo_cards_2.style = "width:50px; height:10px; position:absolute; top:10px; left:48%"
-logo_cards.innerHTML = carte(card1_value,Math.floor(Math.random()*4),"testgame/face.png","30deg");
-logo_cards_2.innerHTML = carte(card2_value,Math.floor(Math.random()*4),"testgame/face.png","-30deg");
+logo_cards.innerHTML = carte(card1_value,Math.floor(Math.random()*4),"face.png","30deg");
+logo_cards_2.innerHTML = carte(card2_value,Math.floor(Math.random()*4),"face.png","-30deg");
 
 //logo_cards.innerHTML = `<p>${card1_value}+${card2_value}: ${logo_blackjack_secret}</p>`
 if ((!logo_blackjack_secret) && secret_cheat) {
