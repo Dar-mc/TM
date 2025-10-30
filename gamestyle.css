@@ -1,0 +1,142 @@
+:root {
+	--default-border-radius: 4%;
+	--card-suit-symbol-size-var: 10;
+}
+body {
+	animation: background-color-animation 4s linear 0s infinite alternate;
+}
+@keyframes background-color-animation {
+	0% {
+		background-color: #2D4B2B;
+	}
+	100% {
+		background-color: #3A5A40;
+	}
+}
+
+.flip-card, .hidden-card {
+  background-color: transparent;
+  aspect-ratio: 2/3;
+  perspective: 999px;
+  border-radius: var(--default-border-radius);
+}
+@media only screen and (max-width: 1401px) {
+  .flip-card, .hidden-card  {
+	width: 20%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .flip-card, .hidden-card  {
+	width: 13%;
+  }
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: var(--default-border-radius)
+}
+/*
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+*/
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-size: 100% 100%;
+  border-radius: var(--default-border-radius)
+}
+
+.flip-card-front {
+  background-color: #bbbbbb;
+  color: black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  background-image:url('card_back.png');
+}
+
+.suit-symbol {
+	margin:auto;
+	user-select: none;
+	aspect-ratio: 1/1;
+}
+
+.hidden-card .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Cache les symboles lorsque la carte est retournée 
+   pour que le joueur ne puisse pas les voir */
+/*.hidden-card .flip-card-front .suit-symbol { 
+  display: none;
+}*/
+
+#card-hand {
+	position: absolute;
+	bottom: 2px;
+	left: 15%;
+	height: 10px;
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	gap: 1%;
+    align-content: space-around;
+    align-items: flex-end;
+	/*background-color: red*/
+}
+#house-hand {
+	position: absolute;
+	top: 50%;
+	left: 17%;
+	height: 10px;
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	gap: 1%;
+    align-content: space-around;
+    align-items: flex-end;
+	/*background-color: red*/
+}
+
+/* boutons */
+
+.button {
+  position: relative;
+  font-size: 2.75em;
+  border-radius: 4px;
+  cursor: default;
+  background-color: #A66E53;
+  font-weight: bold;
+}
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #B4D9A6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1); /* easeInOutQuart par exemple */
+  z-index: 0;
+}
+.button:hover::before, .button:focus::before {
+  transform: scaleX(1);
+}
+.button span {
+  position: relative;
+  z-index: 1;
+}
