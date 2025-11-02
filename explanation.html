@@ -4,6 +4,7 @@
 <title>Explication des éléments du jeu</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <link rel="stylesheet" href="style.css">
@@ -25,16 +26,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Source Sans Pro", sans-serif}
   <div class="w3-center w3-container light-green" style="padding:8px 16px">
    <a href="index.html">
     <!-- <img src="logo.png" alt="Homepage" style="height:70px"> (logo fixe) -->
-	<div id="logo-cards"></div>
-	<div id="logo-cards-2"></div>
-	<script src="logo_script.js"></script>
+	  <div id="logo-cards"></div>
+	  <div id="logo-cards-2"></div>
+	  <script src="logo_script.js"></script>
    </a>
   </div>
   <br>
-  <h1 class="w3-margin w3-jumbo w3-bold">BLACKJACK</h1>
+  <h1 class="w3-margin titre">BLACKJACK</h1>
   <p class="w3-xmedium">Par Dario Guzzante et Cyrus Zarrabi</p>
   <a href="play.html#ancre">
-   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-pale-yellow">Jouer au jeu</button>
+   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-pale-yellow" style="transition-duration:0.5s">Jouer au jeu</button>
    </a>
 </header>
 
@@ -71,13 +72,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Source Sans Pro", sans-serif}
 		<h4>En réalité, le jeu, ne demandant pas de limite de temps, fonctionne en appellant
 		des fonctions à chaque action, et utilise un algorithme pour décider des actions prises.
     </h4>
-    <button class="collapse"><h2>Les cartes</h2></button>
+    <button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>Les cartes</h2></button>
     <div class="content">
 		<h4>Les cartes sont faites en combinant des images d'avant et arrière de carte
     l'une devant l'autre avec "rotateY()", et disposant des images de carreaux, cœurs, 
     trefles ou piques sur la face avant (suivant le symbole de la carte), ce qui les rend modifiables facilement.
     </h4></div>
-		<button class="collapse"><h2>La génération aléatoire des cartes</h2></button>
+		<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>La génération aléatoire des cartes</h2></button>
     <div class="content">
 		<h4>Les cartes sont générées aléatoirement avec la fonction "Math.random()", qui renvoie
 		une valeur entre 0 et 1. (1 exclus) De cette manière, les cartes sont enregistrées avec
@@ -85,7 +86,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Source Sans Pro", sans-serif}
 		de la carte, et "Math.floor(Math.random()*4)", qui renvoie une valeur entre 0 et 3, correspondant
 		aux symboles des cartes. (respectivement ♦ ♥ ♣ ♠)
     </h4></div>
-    <button class="collapse"><h2>La valeur de l'as</h2></button>
+    <button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>La valeur de l'as</h2></button>
     <div class="content">
 		<h4>L'As est particulier, car sa valeur peut changer suivant le nombre de cartes en main.
     </h4>
@@ -145,6 +146,10 @@ for (var j = 0; j < contents.length; j++) {
     contents[j].classList.add("ferme");
   }
 }
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script> //animate on scroll initialization
+ AOS.init();
 </script>
 
 </body>
