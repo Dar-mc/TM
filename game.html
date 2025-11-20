@@ -8,16 +8,16 @@
 <div style="justify-content:end;" id="house-hand"></div>
 <h1 id="text_ending">Tour du joueur</h1>
 <p id="text_score">Score: 0</p> 
-<br>
+<!-- <br> -->
+<p id="house-score"></p>
 <button id="button-hit" class="button" style="display:none" onclick="action_hit()"><span>Carte !</span></button><br></br>
 <button id="button-stand" class="button" style="display:none" onclick="action_stand()"><span>Rester</span></button>
 <!-- <button id="cheat-reveal" onclick="house_hand_reveal()">[Reveal]</button> -->
 <button id="button-retry" class="button" style="display:none" onclick="location.reload()"><span>Rejouer ?</span></button>
 <p id="hand"></p>
-<p id="house-score"></p>
 <div style="justify-content:end" id="card-hand"></div>
 <br><br><br><br><br><br>
-<button class="button" onclick="score_reset();location.reload()">Recommencer la partie</button><br>
+<button class="button" style="font-size:2em;overflow:hidden;max-width:50%;" onclick="score_reset();location.reload()">Recommencer la partie</button><br>
 <p style="justify-self:start;align-self:end;font-weight:bold;font-size:1.5em;color:#40813c;">BLACKJACK <span style="color:red">&#x2665</span></p>
 
 <script src="script.js"></script></body>

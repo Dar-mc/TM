@@ -163,8 +163,8 @@ function carte(nombre,symbol,name="face.png", rotation) {
 </div>
 </div>`
 }
-logo_cards.style = "width:50px; height:10px; position:absolute; top:10px; left:50%"
-logo_cards_2.style = "width:50px; height:10px; position:absolute; top:10px; left:48%"
+logo_cards.style = "width:50px; height:10px; position:absolute; top:10px; left:49.5%"
+logo_cards_2.style = "width:50px; height:10px; position:absolute; top:10px; right:49.5%"
 logo_cards.innerHTML = carte(card1_value,Math.floor(Math.random()*4),"face.png","30deg");
 logo_cards_2.innerHTML = carte(card2_value,Math.floor(Math.random()*4),"face.png","-30deg");
 

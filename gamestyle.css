@@ -140,3 +140,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
+#house-score, #hand, #text_score {
+  font-size: 22px;
+}

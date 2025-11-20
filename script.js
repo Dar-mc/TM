@@ -1,4 +1,3 @@
-
 const element_card = document.getElementById("test");
 const element_hand = document.getElementById("card-hand");
 const element_house = document.getElementById("house-hand");
