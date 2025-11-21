@@ -141,6 +141,8 @@ body {
   z-index: 1;
 }
 
+/* textes */
+
 #house-score, #hand, #text_score {
   font-size: 22px;
 }
