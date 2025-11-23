@@ -172,10 +172,19 @@ color:#7CA982;
 	height: 75%;
 	left: 1.5vw;
 	position: absolute;
-	top: 1.2vh;
+	top: 1.5vh;
 	transform: scaleY(1);
 	transition: 0.4s 0.2s ease-in-out;
 	width: 3px;
+}
+.presentation:nth-child(2)::before {
+  top: 0.9vh;
+}
+.presentation:nth-child(3)::before {
+  top: 0.9vh;
+}
+.presentation:nth-child(4)::before {
+  top: 2.1vh;
 }
 .presentation:hover::before {
 	background-color: #e0e0e0;
@@ -203,9 +212,12 @@ color:#7CA982;
 	transition: 0.3s 0.5s ease-in-out;
 }
 .presentation:nth-child(2)::after {
-	background-image: url(controller.png);
+  background-image: url(maths.png);
 }
 .presentation:nth-child(3)::after {
+	background-image: url(controller.png);
+}
+.presentation:nth-child(4)::after {
   background-image: url(laptop.png);
 }
 
