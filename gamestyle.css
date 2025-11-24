@@ -2,6 +2,13 @@
 	--default-border-radius: 4%;
 	--card-suit-symbol-size-var: 10;
 }
+
+html, body {
+  height: 100%; /* permet au "Blackjack" de rester à la position souhaitée */
+}
+div {
+  display: flex;
+}
 body {
 	animation: background-color-animation 4s linear 0s infinite alternate;
 }
@@ -130,7 +137,7 @@ body {
   background: #B4D9A6;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1); /* easeInOutQuart par exemple */
+  transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   z-index: 0;
 }
 .button:hover::before, .button:focus::before {
@@ -145,4 +152,5 @@ body {
 
 #house-score, #hand, #text_score {
   font-size: 22px;
+  color: black;
 }
