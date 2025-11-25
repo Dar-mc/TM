@@ -23,7 +23,7 @@ const button_display = "inline";
 let temp_cardnum = Math.floor(Math.random()*4);
 let temp_card = 0;
 let game_phase = 0;
-const attribute_class = document.createAttribute("class")
+const attribute_class = document.createAttribute("class");
 function _tocard(nombre,symbol,name="wind.png") {
 	switch(nombre) {
 	case 1: return `">`+
@@ -199,7 +199,7 @@ function _tocard(nombre,symbol,name="wind.png") {
 // Fonction de generation de carte - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 function carte(nombre,symbol,name="wind.png", visibility=true) {
 	_card_front_side = _tocard(nombre,symbol,name)
-	return `<div class="${(visibility) ? "flip-card" : "hidden-card"}">
+	return `<div class="${(visibility) ? "drama-card" : "hidden-card"}">
   <div class="flip-card-inner">
     <div class="flip-card-front" style="background-image:url('${name}')${_card_front_side}
     </div>
@@ -339,6 +339,19 @@ function house_hand_start() {
 		player_turn();
 	}
 }
+function card_dramatic_reveal() {
+	const dramaticards = document.getElementsByClassName("drama-card");
+	console.log(dramaticards);
+	console.log("TEST");
+	for (let i = 0; i < dramaticards.length+1; i++) {
+		for (let i of dramaticards) {
+			console.log(i);
+			i.className = "flip-card";
+		}
+	}
+	
+	update_board()
+}
 function house_hand_reveal() {
 	attribute_class.value = "flip-card";
 	const house_hiddens = document.getElementsByClassName("hidden-card");
@@ -434,6 +447,6 @@ function score_set(x) {
 	score = x;
 	score_text.innerText = `Score: ${score}`;
 }
-house_hand_start()
-
+house_hand_start();
+setTimeout(card_dramatic_reveal, 10);
 console.log(player_score())

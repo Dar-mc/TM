@@ -4,7 +4,7 @@
 }
 
 html, body {
-  height: 100%; /* permet au "Blackjack" de rester à la position souhaitée */
+  height: 100%; /* permet au "Blackjack" de rester en bas */
 }
 div {
   display: flex;
@@ -21,19 +21,19 @@ body {
 	}
 }
 
-.flip-card, .hidden-card {
+.flip-card, .hidden-card, .drama-card {
   background-color: transparent;
   aspect-ratio: 2/3;
   perspective: 999px;
   border-radius: var(--default-border-radius);
 }
 @media only screen and (max-width: 1401px) {
-  .flip-card, .hidden-card  {
+  .flip-card, .hidden-card, .drama-card  {
 	width: 20%;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .flip-card, .hidden-card  {
+  .flip-card, .hidden-card, .drama-card  {
 	width: 13%;
   }
 }
@@ -86,6 +86,9 @@ body {
 .hidden-card .flip-card-inner {
   transform: rotateY(180deg);
 }
+.drama-card .flip-card-inner {
+  transform: rotateY(180deg);
+}
 
 /* Cache les symboles lorsque la carte est retournée 
    pour que le joueur ne puisse pas les voir */
@@ -106,6 +109,7 @@ body {
     align-items: flex-end;
 	/*background-color: red*/
 }
+
 #house-hand {
 	position: absolute;
 	top: 50%;
@@ -119,7 +123,18 @@ body {
     align-items: flex-end;
 	/*background-color: red*/
 }
-
+@media only screen and (max-width: 750px) {
+	#card-hand {
+		rotate: 90deg;
+		top: 50%;
+		left: 20%;
+	}
+	#house-hand {
+		rotate: 90deg;
+		top: 10%;
+		left: 30%;
+	}
+}
 /* boutons */
 
 .button {
