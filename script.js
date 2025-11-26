@@ -299,7 +299,10 @@ function randomcard() {
 	return [1+Math.floor(Math.random()*13),Math.floor(Math.random()*4)]
 }
 function card_draw(x) {
-	if (x < 1) {return;}
+	if (x < 1) {
+		setTimeout(card_dramatic_reveal, 10);
+		return;
+	}
 	temp_card = randomcard()
 	console.log(temp_card)
 	/*element_card.innerHTML = carte(temp_card[0],temp_card[1],card_face); // § Faire la carte apparaitre 1 doit etre temp_card[0]*/
@@ -311,7 +314,10 @@ function card_draw(x) {
 card_draw(2)
 
 function card_draw_house(x) {
-	if (x < 1) {return;}
+	if (x < 1) {
+		setTimeout(card_dramatic_reveal, 10);
+        return;
+	}
 	temp_card = randomcard()
 	console.log(temp_card)
 	element_house.innerHTML = element_house.innerHTML+carte(temp_card[0],temp_card[1],card_face)
