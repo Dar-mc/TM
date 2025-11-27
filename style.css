@@ -221,6 +221,27 @@ color:#7CA982;
   background-image: url(laptop.png);
 }
 
+/* Page "à propos" sur mobile */
+
+@media (max-width:600px) {
+  .divpresentation {
+    width: 98%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .presentation {
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+  }
+  .presentation::before, .presentation::after {
+    display: none;
+  }
+  .presentation:hover {
+    transform: none;
+  }
+}
+
 /* Menu déroulant */
 
 .collapse {
