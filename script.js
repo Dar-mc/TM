@@ -313,18 +313,6 @@ function card_draw(x) {
 }
 card_draw(2)
 
-function card_draw_house(x) {
-	if (x < 1) {
-		setTimeout(card_dramatic_reveal, 10);
-        return;
-	}
-	temp_card = randomcard()
-	console.log(temp_card)
-	element_house.innerHTML = element_house.innerHTML+carte(temp_card[0],temp_card[1],card_face)
-	house_hand.push(temp_card);
-	card_draw_house(x-1);
-	update_board();
-}
 function house_hand_start() {
 	temp_card = randomcard();
 	console.log(temp_card);
@@ -400,7 +388,7 @@ function dealer_draw() {
 	console.log(temp_card);
 	element_house.innerHTML = element_house.innerHTML+carte(temp_card[0],temp_card[1],card_face,true); //§
 	house_hand.push(temp_card);
-	house_hand_reveal();
+	setTimeout(card_dramatic_reveal, 42);
 	update_board();
 	dealer_turn();
 }
