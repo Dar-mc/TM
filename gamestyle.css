@@ -126,13 +126,17 @@ body {
 @media only screen and (max-width: 750px) {
 	#card-hand {
 		rotate: 90deg;
-		top: 60%;
-		left: 17%;
+		top: none;
+		bottom: 32%;
+		left: -10%;
 	}
 	#house-hand {
 		rotate: 90deg;
-		top: 5%;
-		left: 40%;
+		top: 10%;
+		left: 30%;
+	}
+	.flip-card, .hidden-card, .drama-card  {
+		width: 32%;
 	}
 }
 /* boutons */

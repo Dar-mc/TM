@@ -414,14 +414,16 @@ function ending_blackjack() {
 	setTimeout(try_again, game_speed);
 }
 function ending_lose() {
-	hide_actions();
-	ending_text.innerText = "Défaite."
-	if (score > 10) {
-		score_set(Number(score) - 10)
-	} else {
-		score_set(0)
+	if (ending_text.innerText != "Défaite.") {	
+		hide_actions();
+		ending_text.innerText = "Défaite."
+		if (score > 10) {
+			score_set(Number(score) - 10)
+		} else {
+			score_set(0)
+		}
+		setTimeout(try_again, game_speed);
 	}
-	setTimeout(try_again, game_speed);
 }
 function ending_win() {
 	hide_actions();
