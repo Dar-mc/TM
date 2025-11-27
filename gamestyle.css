@@ -74,7 +74,6 @@ body {
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
-  background-image:url('card_back.png');
 }
 
 .suit-symbol {
@@ -148,6 +147,20 @@ body {
   cursor: default;
   background-color: #A66E53;
   font-weight: bold;
+}
+.style-button {
+  position: relative;
+  font-size: 2.75em;
+  border-radius: 4px;
+  cursor: default;
+  background-color: #CCCCCC;
+  font-weight: bold;
+}
+.style-button:hover {
+	cursor: help;
+}
+.style-button:active {
+  background-color: #999999;
 }
 .button::before {
   content: '';

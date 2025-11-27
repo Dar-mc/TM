@@ -7,10 +7,19 @@ const score_house = document.getElementById("house-score");
 const button_hit = document.getElementById("button-hit");
 const button_stand = document.getElementById("button-stand");
 const button_retry = document.getElementById("button-retry");
-const card_face = "face.png";
 const game_speed = 777; // delais (ms) entre la plupart des actions
+let card_face = "face.png";
+let card_face_back = "card_back.png";
+if (localStorage.getItem("style") == null) {
+	card_face = "face.png";
+	card_face_back = "card_back.png";
+} else {
+	card_face = `face_${localStorage.getItem("style")}.png`;
+	card_face_back = `back_${localStorage.getItem("style")}.png`;
+}
+console.log(localStorage.getItem("style"))
 let score_temp = 0;
-let score = 100
+let score = 100;
 if (localStorage.getItem("score") == null) {
 	score = 100;
 } else {
@@ -24,6 +33,13 @@ let temp_cardnum = Math.floor(Math.random()*4);
 let temp_card = 0;
 let game_phase = 0;
 const attribute_class = document.createAttribute("class");
+function style_change() {
+	if (localStorage.getItem("style") == null) {
+		localStorage.setItem("style", 1);
+	} else {
+		localStorage.removeItem("style"); 
+	}
+}
 function _tocard(nombre,symbol,name="wind.png") {
 	switch(nombre) {
 	case 1: return `">`+
@@ -203,7 +219,7 @@ function carte(nombre,symbol,name="wind.png", visibility=true) {
   <div class="flip-card-inner">
     <div class="flip-card-front" style="background-image:url('${name}')${_card_front_side}
     </div>
-    <div class="flip-card-back">
+    <div class="flip-card-back" style="background-image:url('${card_face_back}');">
     </div>
   </div>
 </div>`
@@ -273,7 +289,7 @@ function update_board() {
 		tempvar += hand[i][0].toString() + "/" + hand[i][1].toString() + "  "
 	}
 	if (game_phase == 0) {
-		for (let i in house_hand) { // § ??? Fonctionne pas sans la for loop ???
+		for (let i in house_hand) {
 			if (house_hand[0][0]>10) {
 				tempvar_hand_score = 10;
 			} else if (house_hand[0][0]==1) {
@@ -305,7 +321,6 @@ function card_draw(x) {
 	}
 	temp_card = randomcard()
 	console.log(temp_card)
-	/*element_card.innerHTML = carte(temp_card[0],temp_card[1],card_face); // § Faire la carte apparaitre 1 doit etre temp_card[0]*/
 	element_hand.innerHTML = element_hand.innerHTML+carte(temp_card[0],temp_card[1],card_face)
 	hand.push(temp_card);
 	card_draw(x-1);
@@ -386,7 +401,7 @@ function dealer_turn() {
 function dealer_draw() {
 	temp_card = randomcard();
 	console.log(temp_card);
-	element_house.innerHTML = element_house.innerHTML+carte(temp_card[0],temp_card[1],card_face,true); //§
+	element_house.innerHTML = element_house.innerHTML+carte(temp_card[0],temp_card[1],card_face,true);
 	house_hand.push(temp_card);
 	setTimeout(card_dramatic_reveal, 42);
 	update_board();
