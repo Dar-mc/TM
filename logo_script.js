@@ -152,7 +152,7 @@ function _tocard(nombre,symbol) {
 
 function carte(nombre,symbol,name="face.png", rotation) {
 	let _card_front_side = _tocard(nombre,symbol) /*nombre,symbol,name*/
-	let border_effect = (logo_blackjack_secret) ? "style=\"border-style:double;\"" : ""
+	let border_effect = (logo_blackjack_secret) ? "style=\"border-style:double;border-color:white;\"" : ""
 	return `<div class="logo-card-tilt" style="transform: rotate(${rotation});"><div class="logo-card-single">
   <div class="logo-card-inner" ${border_effect}>
     <div class="logo-card-front" style="background-image:url('${name}')${_card_front_side}

@@ -349,7 +349,7 @@ color:#7CA982;
 	background-color: #2980b9;
 	color: white;
 	transform: rotateY(0deg);
-	background-image:url('testgame/card_back.png');
+	background-image:url('card_back.png');
 }
 
 .logo-suit-symbol {
