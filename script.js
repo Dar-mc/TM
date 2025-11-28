@@ -7,6 +7,7 @@ const score_house = document.getElementById("house-score");
 const button_hit = document.getElementById("button-hit");
 const button_stand = document.getElementById("button-stand");
 const button_retry = document.getElementById("button-retry");
+const button_reset = document.getElementById("button-reset");
 const game_speed = 777; // delais (ms) entre la plupart des actions
 let card_face = "face.png";
 let card_face_back = "card_back.png";
@@ -448,7 +449,11 @@ function ending_win() {
 	setTimeout(try_again, game_speed);
 }
 function try_again() {
-	button_retry.style.display = button_display;
+	if (score <1) {
+		button_reset.style.display = button_display;
+	} else {
+		button_retry.style.display = button_display;
+	}
 }
 function score_reset() {
 	score_set(100);

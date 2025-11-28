@@ -76,15 +76,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Source Sans Pro", sans-serif}
     <div class="content">
 		<h4>Les cartes sont faites en combinant des images d'avant et arrière de carte
     l'une devant l'autre avec "rotateY()", et disposant des images de carreaux, cœurs, 
-    trefles ou piques sur la face avant (suivant le symbole de la carte), ce qui les rend modifiables facilement.
-    </h4></div>
+    trefles ou piques sur la face avant (suivant le symbole de la carte), ce qui les rend modifiables facilement.<br>
+    Lorsqu'une nouvelle carte est distribuée, sa "class" la fait apparaître face cachée, puis est changée de sorte à la tourner face visible.<br>
+	Pour plus de visibilité, il est possible de changer une variable "localStorage" (persistante) qui utilise des images blanches pour les cartes.<br>
+	"localStorage.setItem([nom], [valeur])" donne la valeur [valeur] à la variable persistante [nom].<br>
+	"localStorage.getItem([nom])" renvoie la valeur de la variable persistante [nom].
+	</h4></div>
 		<button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>La génération aléatoire des cartes</h2></button>
     <div class="content">
 		<h4>Les cartes sont générées aléatoirement avec la fonction "Math.random()", qui renvoie
 		une valeur entre 0 et 1. (1 exclus) De cette manière, les cartes sont enregistrées avec
 		deux nombres: "1+Math.floor(Math.random()*13)", qui renvoie une valeur entre 1 et 13, pour la valeur
-		de la carte, et "Math.floor(Math.random()*4)", qui renvoie une valeur entre 0 et 3, correspondant
-		aux symboles des cartes. (respectivement ♦ ♥ ♣ ♠)
+		de la carte - 11, 12 et 13 sont le valet, la reine et le roi respectivement -, et "Math.floor(Math.random()*4)", qui renvoie une valeur entre 0 et 3, correspondant
+		aux symboles des cartes. (respectivement ♦ ♥ ♣ ♠)<br>
+		Les deux valeurs sont enregistrées dans des "Array", un type de liste. La main du joueur (et du croupier/de la maison) est donc une liste de listes à deux éléments.
     </h4></div>
     <button class="collapse" data-aos="fade-down" data-aos-duration="750"><h2>La valeur de l'as</h2></button>
     <div class="content">
